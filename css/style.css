@@ -1,0 +1,193 @@
+/* CSS Document */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.style2 {color: #333333}
+.style3 {
+	color: #FF0000;
+	font-size: 12px;
+}
+.style4 {
+	color: #0033FF;
+	font-style: italic;
+	font-size: 10px;
+}
+
+#errorbox
+{
+	background-color: #FFB584;
+	border: thin solid #D20000;
+}
+#hdline {
+	line-height: 40px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	background-image: url(../images/hdlinebg.png);
+	background-repeat: no-repeat;
+	width: 100%;
+}
+#sucbox {
+	background-color: #FFFFFF;
+	border: thin solid #517CFF;
+}
+#header {
+	height: 100px;
+	width: 100%;
+	background-color: #CCCC00;
+	background-image: url(../images/tintop.png);
+	background-repeat: repeat-x;
+}
+#superRightNav {
+	background-image: url(../images/adminheaderbg.png);
+	background-repeat: no-repeat;
+}
+
+#footer {
+	background-color: #CCCC00;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+.error {
+	color: #FFFFFF;
+	text-align: left;
+	font-family:Verdana;
+	font-size:11px;
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+
+}
+
+.t1 {
+	background-color: #FFF;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+	line-height: 20px;
+	color: #000000;
+}
+.t2 {
+	background-color: #DADADA;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+	line-height: 20px;
+	color: #000;
+}
+
+.pagination {font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#FF6633
+}.tableheader {
+	background-color: #FF9933;
+	font-size: 10px;
+	line-height: 20px;
+	font-family: "trebuchet MS";
+	font-weight: bold;
+}
+#status a 
+{
+	color: #009900;
+	font-size: 10px;
+	text-decoration: none;
+}#action {
+	background-color: #FFBF95;
+	border: thin solid #E62E00;
+	color: #000000;
+	width: 50%;
+	line-height: 20px;
+	height: 20px;
+	font-size: 14px;
+}
+#leftheader {
+	width: 60%;
+	float: left;
+	background-image: url(../images/hdbg.png);
+	background-repeat: no-repeat;
+}
+#ritheader {
+	float: right;
+	width: 40%;
+	background-repeat: no-repeat;
+	background-image: url(../images/adminheadbg.png);
+}
+#right_below {
+	height: 100px;
+	background-color: #666633;
+	width: 100%;
+}
+
+.style5 {
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+.style6 {font-size: 9px}
+.style7 {font-size: 10px}
+
+#sidenav li a {
+	color: #FFFFFF;
+	font-size: 16px;
+	display: block;
+	padding-top: 0px;
+	height: 30px;
+	text-decoration: none;
+	background-color: #CCCC00;
+	width: 120px;
+}
+#sidenav li {
+	text-decoration: none;
+	display: block;
+}
+
+#sidenav a:hover {
+	color: #CCCC00;
+	background-color: #FFFFFF;
+}
+#sidenav ul {
+	display: block;
+}
+#loginbg {
+	background-image: url(../images/loginbg.png);
+	background-repeat: no-repeat;
+}
+#container #contentWrapper #content #form1 #loginbg #info {
+	width: 56%;
+}
+#contactInfo
+{
+	display: none;
+}
+
+#pagetitle
+ {
+	padding-top: 10px;
+	float: left;
+	width: 100%;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: #982626;
+}
+a:hover
+ {
+	text-decoration: underline;
+}
+
+#pagehead {
+	margin-bottom: 10px;
+	width: 100%;
+	padding-left: 10px;
+}
+#right_below {
+	height: auto;
+	width: auto;
+}
