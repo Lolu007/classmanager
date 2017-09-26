@@ -32,8 +32,8 @@ class PS_Pagination {
 	 * @param integer $rows_per_page Number of records to display per page. Defaults to 10
 	 * @param integer $links_per_page Number of links to display per page. Defaults to 5
 	 */
-	 
-	function PS_Pagination($connection, $sql, $rows_per_page = 10, $links_per_page = 5) {
+	function __construct($connection, $sql, $rows_per_page = 10, $links_per_page = 5)
+	{
 		$this->conn = $connection;
 		$this->sql = $sql;
 		$this->rows_per_page = $rows_per_page;
@@ -208,4 +208,4 @@ class PS_Pagination {
 		$this->debug = $debug;
 	}
 }
-?>
+
