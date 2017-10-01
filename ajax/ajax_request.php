@@ -1,8 +1,9 @@
 <?php
-	require_once("../classes/adminCodes.php");
-	
-	$class = new ClassManager();
-	
-	echo $class->treatRequest();
 
-?>
+use classmanager\core\managers\ClassManager;
+
+require_once('../bootstrap.php');
+
+$class = new ClassManager($dbo);
+
+echo $class->treatRequest();

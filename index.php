@@ -1,20 +1,11 @@
 <?php
-session_start();
 
-require_once("classes/adminCodes.php");
+require_once('bootstrap.php');
 
-$admin = new AdminManager();
+$auth = new \classmanager\core\auth\Authenticator($dbo);
 
-if (isset($_GET['error'])) {
-    $info = $admin->setError(base64_decode($_GET['error']));
-}
-
-if (isset($_GET['out'])) {
-    $info = $admin->setSuccess(base64_decode($_GET['out']));
-}
-
-if (isset($_POST['adminlogbtn'])) {
-    $info = $admin->adminLogin();
+if (isset($_POST['login'])) {
+    $info = $auth->login($_POST['username'], $_POST['password']);
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -68,22 +59,22 @@ if (isset($_POST['adminlogbtn'])) {
                                                                     <td width="33%" align="right" valign="middle"
                                                                         class="tblabel">Username:
                                                                     </td>
-                                                                    <td width="67%"><input name="adminuser" type="text"
-                                                                                           id="adminuser" required/></td>
+                                                                    <td width="67%"><input name="username" type="text"
+                                                                                           id="username" required/></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td width="33%" align="right" valign="middle"
                                                                         class="tblabel">Password:
                                                                     </td>
-                                                                    <td width="67%"><input name="adminpass"
+                                                                    <td width="67%"><input name="password"
                                                                                            type="password"
-                                                                                           id="adminpass" required/></td>
+                                                                                           id="password" required/></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td width="33%">&nbsp;</td>
                                                                     <td width="67%"><input type="submit"
-                                                                                           name="adminlogbtn"
-                                                                                           id="adminlogbtn"
+                                                                                           name="login"
+                                                                                           id="login"
                                                                                            value="Login"/>
                                                                     </td>
                                                                 </tr>

@@ -1,24 +1,12 @@
 <?php
-session_start();
-//including the file that contains the AdminManager class
-require_once("classes/adminCodes.php");
+
+require_once('bootstrap.php');
+require_once('auth_check.php');
 require_once("classes/ps_pagination.php");
-
-$admin = new AdminManager();
-$db = new DBConn();
-
 
 $adminstatus = base64_decode($_GET['adminstatus']);
 $user = base64_decode($_GET['user']);
 $name = base64_decode($_GET['name']);
-
-if (!isset($_SESSION['adminId']) && ($_SESSION['logged'] != true)) {
-    header("location:index.php?error=" . base64_encode("Unathourized Access, please login"));
-}
-
-$query = "SELECT * FROM admin WHERE adminId='" . $_SESSION['adminId'] . "'";
-$row = $db->fetchData($query);
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -91,10 +79,6 @@ $row = $db->fetchData($query);
                             </table>
                         </td>
                         <td width="20%" align="left" valign="top" bgcolor="#CCCC00">
-                            <?php if (isset($adminstatus) && $adminstatus == 1) {
-                                include("adminrightnav.php"); ?>
-
-                            <?php } ?><br/><br/><br/><br/>
                             <div id="right_below"><?php include("calender/calender.php"); ?></div>
                         </td>
                     </tr>

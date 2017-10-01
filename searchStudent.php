@@ -1,6 +1,4 @@
 <?php
-session_start();
-require_once("classes/adminCodes.php");
-$student = new ClassManager();
-echo $student->searchStudent();
-?>
+require_once('bootstrap.php');
+
+echo $classManager->searchStudent();
