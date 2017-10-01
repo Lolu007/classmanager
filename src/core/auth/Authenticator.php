@@ -2,7 +2,6 @@
 
 namespace classmanager\core\auth;
 
-use classmanager\core\db\persistence\PDOConn;
 use classmanager\core\db\persistence\Persistence;
 use PDO;
 
@@ -58,5 +57,13 @@ class Authenticator implements AuthIdentity
         $stmt->execute();
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function logout()
+    {
+        unset($_SESSION['adminId']);
+        unset($_SESSION['logged']);
+
+        header("location:index.php?out=You have logged out successfully!");
     }
 }

@@ -1,8 +1,6 @@
 <?php
-session_start();
-require_once("classes/adminCodes.php");
+require_once('bootstrap.php');
 
-$admin = new AdminManager();
-$admin->adminLogout();
-//$db->close();
-?>
+$auth = new \classmanager\core\auth\Authenticator($dbo);
+
+$auth->logout();

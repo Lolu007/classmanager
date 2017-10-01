@@ -182,13 +182,7 @@ class AdminManager2
 
     public function adminLogout()
     {
-        //unset the variables
-        //session_destroy();
-        unset($_SESSION['adminId']);
-        unset($_SESSION['logged']);
-        //session_start();
-        error_reporting(E_ALL ^ E_NOTICE);
-        header("location:index.php?out=" . base64_encode("You have logged out successfully!") . $_SESSION['adminId']);
+
     }
 
     private function validateAdmin($username, $password)
