@@ -1,7 +1,6 @@
 <?php 
 		session_start();
-error_reporting(E_ALL ^ E_NOTICE);
-		error_reporting(E_ALL ^ E_NOTICE);
+
 		//including the file that contains the AdminManager class
 		require_once("classes/adminCodes.php");
 		require_once("classes/ps_pagination.php");
