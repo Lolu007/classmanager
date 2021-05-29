@@ -33,7 +33,7 @@ class AdminManager2
         $regexp = "/^[^0-9][A-z0-9_]+([.][A-z0-9_]+)*[@][A-z0-9_]+([.][A-z0-9_]+)*[.][A-z]{2,4}$/";
 
         if ($username == "") {
-            $errormsg .= "Username is empty<br>";
+            $errormsg .= "Username cannot be empty<br>";
         }
         if (!empty($username) && strlen($username) < 6) {
             $errormsg .= "Username is too short!<br>";
